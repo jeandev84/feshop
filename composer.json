@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Framework\\": "src/janklod",
+            "Framework\\": "src/cms",
             "app\\": "app"
         }
     },

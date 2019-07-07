@@ -11,8 +11,7 @@ define("CACHE", ROOT.'/tmp/cache');
 define("CONFIG", ROOT.'/config');
 define("CORE", ROOT.'/src');
 define("LAYOUT", 'default');
-
-/* define("LIBS", ROOT.'/libs'); */
+define("LIBS", ROOT.'/src/libs');
 
 // http://eshop.loc/public/index.php
 $app_path = sprintf('http://%s%s', $_SERVER['HTTP_HOST'], $_SERVER['PHP_SELF']);
@@ -32,5 +31,4 @@ define('ADMIN', BASE_URL.'/admin');
 
 
 // Autoloading classes
-
 require_once ROOT.'/vendor/autoload.php';
