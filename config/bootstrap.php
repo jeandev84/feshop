@@ -32,3 +32,6 @@ define('ADMIN', BASE_URL.'/admin');
 
 // Autoloading classes
 require_once ROOT.'/vendor/autoload.php';
+
+// Include Functions
+require_once LIBS .'/functions.php';
