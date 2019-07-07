@@ -1,0 +1,17 @@
+{
+    "name": "janklod/eshop",
+    "description": "Training project e-commerce from scratch using MVC pattern",
+    "authors": [
+        {
+            "name": "janklod84",
+            "email": "jeanyao34@yahoo.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "src/janklod",
+            "app\\": "app"
+        }
+    },
+    "require": {}
+}
