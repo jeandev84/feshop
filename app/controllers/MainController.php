@@ -3,6 +3,8 @@ namespace app\controllers;
 
 
 
+use Framework\App;
+
 /**
  * Class MainController
  *
@@ -11,17 +13,25 @@ namespace app\controllers;
 class MainController extends AppController
 {
 
+
     /**
      * Action index
+     *
+     *  Ex:
+     *  $this->setMeta('Главная страница', 'Описание', 'Ключевики');
+     *  $this->setMeta(App::$app->get('shop_name'), 'Описание', 'Ключевики');
      *
      * @return void
      */
      public function indexAction()
      {
-          debug($this->route);
 
-          $this->setMeta('Главная', 'Описание', 'Ключевики');
+         $this->setMeta('Главная страница', 'Описание', 'Ключевики');
 
-          // debug($this->meta);
+         $meta = 'ddddkle';
+         $title = 'ddd';
+
+         $this->set(compact('meta', 'title'));
+
      }
 }

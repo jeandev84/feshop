@@ -3,6 +3,9 @@ namespace Framework\Routing;
 
 
 
+use Framework\Template\View;
+
+
 /**
  * Class Controller
  *
@@ -26,7 +29,7 @@ abstract class Controller
     protected $view;
     protected $prefix;
     protected $data = [];
-    protected $meta = [];
+    protected $meta = ['title' => '', 'desc'  => '', 'keywords' => ''];
     protected $layout;
 
 
@@ -44,7 +47,19 @@ abstract class Controller
         $this->view = $route['action'];
         $this->prefix = $route['prefix'];
     }
-    
+
+
+    /**
+     * Get view
+     *
+     * @return void
+     * @throws \Exception
+     */
+    public function getView()
+    {
+         $viewObj = new View($this->route, $this->layout, $this->view, $this->meta);
+         $viewObj->render($this->data);
+    }
 
 
     /**
@@ -74,5 +89,5 @@ abstract class Controller
 
 
 
-
+   
 }
