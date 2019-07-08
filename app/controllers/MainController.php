@@ -4,6 +4,7 @@ namespace app\controllers;
 
 
 use Framework\App;
+use R;
 
 /**
  * Class MainController
@@ -25,13 +26,15 @@ class MainController extends AppController
      */
      public function indexAction()
      {
+         // get posts and post
+         $posts = \R::findAll('test');
+         $post  = R::findOne('test', 'id = ?', [2]);
+
+         // debug($posts);
 
          $this->setMeta('Главная страница', 'Описание', 'Ключевики');
 
-         $meta = 'ddddkle';
-         $title = 'ddd';
-
-         $this->set(compact('meta', 'title'));
+         $this->set(compact('posts'));
 
      }
 }

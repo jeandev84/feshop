@@ -17,7 +17,11 @@ abstract class Model
     public $rules  = [];
 
 
+    /**
+     * Model constructor.
+     */
     public function __construct()
     {
+        DB::instance();
     }
 }

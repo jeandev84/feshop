@@ -1,10 +1,2 @@
-[2019-07-08 07:29:58] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
-=============
-[2019-07-08 07:33:31] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
-=============
-[2019-07-08 07:46:03] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
-=============
-[2019-07-08 07:48:07] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
-=============
-[2019-07-08 13:47:21] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+[2019-07-08 15:37:06] Текст ошибки: Нет соединения с БД | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Database\DB.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Database\DB.php
 =============

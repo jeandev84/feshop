@@ -39,7 +39,7 @@ require_once LIBS .'/functions.php';
 
 // Set aliases
 class_alias('Framework\Routing\Router', 'Router');
-
+class_alias('\RedBeanPHP\R', '\R');
 
 // Inclure Routes
 require APP.'/routes.php';
