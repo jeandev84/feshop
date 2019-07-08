@@ -27,26 +27,7 @@ class MainController extends AppController
      */
      public function indexAction()
      {
-         // get posts and post
-         $posts = \R::findAll('test'); # debug($posts);
-         $post  = R::findOne('test', 'id = ?', [2]);
-
-
          // set meta
          $this->setMeta('Главная страница', 'Описание', 'Ключевики');
-
-         // caching data
-         $cache = Cache::instance();
-         // $cache->set('posts', $posts);
-         $cache->delete('posts');
-         $data = $cache->get('posts'); // debug($data);
-         if(!$data)
-         {
-             $cache->set('posts', $posts);
-         }
-
-         // parse data to view
-         $this->set(compact('posts'));
-
      }
 }
