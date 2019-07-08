@@ -114,6 +114,8 @@ class Router
     {
         // remove query string
         $url = self::removeQueryString($url);
+        /* var_dump($url); */
+
         // process dispatching route
         if(self::match($url))
         {
@@ -187,6 +189,7 @@ class Router
     }
 
 
+
     /**
      * Remove Query string
      *
@@ -202,11 +205,14 @@ class Router
         //  echo $url;
         if($url)
         {
-            $params = explode('&', $url, 2); // debug($params);
+            $params = explode('&', $url, 2);
+            // debug($params);
+
+            // Si $params[0] ne comporte pas '=' alors on retourne la valeur
             if(strpos($params[0], '=') === false) // page/part1..
             {
                 return rtrim($params[0], '/');
-            }else{ // page = something
+            }else{ // sinon $params[0] comporte '=', on supprime alors on retourne du vide
                 return '';
             }
         }

@@ -21,11 +21,11 @@ class App
     public static $app;
 
 
-
     /**
      * App constructor.
      *
      * @return void
+     * @throws \Exception
      */
     public function __construct()
     {
@@ -59,7 +59,7 @@ class App
      */
      protected function setParams()
      {
-        $params = require_once CONFIG . '/params.php';
+        $params = require_once CONFIG . '/app.php';
 
         if(!empty($params))
         {
