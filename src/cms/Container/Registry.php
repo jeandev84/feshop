@@ -42,6 +42,17 @@ class Registry
       }
 
 
+      /**
+      * Add properties
+      *
+      * @param array $properties
+     */
+      public function add(array $properties = [])
+      {
+          self::$properties = array_merge(self::$properties, $properties);
+      }
+
+
      /**
       * @return array
      */
