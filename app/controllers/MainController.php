@@ -27,7 +27,16 @@ class MainController extends AppController
      */
      public function indexAction()
      {
+
+         // Get 3 firsts brands
+         $brands = R::find('brand', 'LIMIT 3');
+
+
          // set meta
          $this->setMeta('Главная страница', 'Описание', 'Ключевики');
+
+
+         // parse data to view
+         $this->set(compact('brands'));
      }
 }
