@@ -3,6 +3,9 @@ namespace Framework;
 
 
 use Framework\Container\Registry;
+use Framework\Exception\ErrorHandler;
+
+
 
 /**
  * Class App
@@ -38,6 +41,10 @@ class App
 
          // Set params
          $this->setParams();
+
+
+         // Instancied Error Handler
+         new ErrorHandler();
     }
 
 

@@ -4,11 +4,12 @@
  * Entry Point of Application
  */
 
-require_once dirname(__DIR__).'/config/bootstrap.php';
+require_once dirname(__DIR__).'/app/bootstrap.php';
 
 
 // Instance of Application
 $app = new \Framework\App();
 
 
-debug(\Framework\App::$app->properties());
+/* debug(\Framework\App::$app->properties()); */
+
