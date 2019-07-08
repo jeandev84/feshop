@@ -21,44 +21,38 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 <!--top-header-->
 <div class="top-header">
-    <div class="container">
-        <div class="top-header-main">
-            <div class="col-md-6 top-header-left">
-                <div class="drop">
-                    <div class="box">
-                        <!-- Widgets Currency -->
-                        <select id="currency" tabindex="4" class="dropdown drop">
-                            <?php new \app\widgets\currency\Currency() ?>
-                        </select>
-                        <!-- End Widgets currency -->
-                    </div>
-                    <div class="box1">
-                        <!-- Widgets Language -->
-                        <select tabindex="4" class="dropdown">
-                            <option value="" class="label">English :</option>
-                            <option value="1">English</option>
-                            <option value="2">French</option>
-                            <option value="3">German</option>
-                        </select>
-                        <!-- End Widgets Language -->
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="col-md-6 top-header-left">
-                <div class="cart box_1">
-                    <a href="checkout.html">
-                        <div class="total">
-                            <span class="simpleCart_total"></span></div>
-                        <img src="images/cart-1.png" alt="" />
-                    </a>
-                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
+    <div class="drop">
+        <div class="box">
+            <!-- Widgets Currency -->
+            <select id="currency" tabindex="4" class="dropdown drop">
+                <?php new \app\widgets\currency\Currency() ?>
+            </select>
+            <!-- End Widgets currency -->
+        </div>
+        <div class="box1">
+            <!-- Widgets Language -->
+            <select tabindex="4" class="dropdown">
+                <option value="" class="label">English :</option>
+                <option value="1">English</option>
+                <option value="2">French</option>
+                <option value="3">German</option>
+            </select>
+            <!-- End Widgets Language -->
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="col-md-6 top-header-left">
+        <div class="cart box_1">
+            <a href="checkout.html">
+                <div class="total">
+                    <span class="simpleCart_total"></span></div>
+                <img src="images/cart-1.png" alt="" />
+            </a>
+            <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+            <div class="clearfix"> </div>
         </div>
     </div>
+    <div class="clearfix"></div>
 </div>
 <!--top-header-->
 <!--start-logo-->
@@ -71,6 +65,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="container">
         <div class="header">
             <div class="col-md-9 header-left">
+                <!--
                 <div class="top-nav">
                     <ul class="memenu skyblue"><li class="active"><a href="index.html">Home</a></li>
                         <li class="grid"><a href="#">Men</a>
@@ -207,6 +202,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <li class="grid"><a href="contact.html">Contact</a>
                         </li>
                     </ul>
+                </div>
+                -->
+                <div class="menu">
+                    <?php new \app\widgets\menu\Menu([
+                            'tpl' => WWW.'/menu/menu.php',
+                    ]);?>
                 </div>
                 <div class="clearfix"> </div>
             </div>
