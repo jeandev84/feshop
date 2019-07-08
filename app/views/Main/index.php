@@ -42,6 +42,11 @@
 
 <!-- May be Popular products , Lasts products or News products -->
 <?php if($hits): ?>
+
+<!-- Get Currency from container -->
+    <?php  $curr = \Framework\App::$app->get('currency'); ?>
+<!-- End Currency -->
+
 <div class="product">
     <div class="container">
         <div class="product-top">
@@ -61,10 +66,21 @@
                                 <p>Explore Now</p>
                                 <h4>
                                     <a class="add-to-cart-link" href="cart/add?id=<?= $hit->id ?>"><i></i></a>
-                                    <span class=" item_price">$ <?= $hit->price ?></span>
+                                    <span class=" item_price">
+                                        <!--
+                                             must to create function for format_price($price)
+                                             and use  php format_number() for surround value
+                                         -->
+                                        <?= $curr['symbol_left'] . ($hit->price * $curr['value']). $curr['symbol_right'] ?>
+                                        <!-- end function -->
+                                    </span>
                                     <!-- show old price if has -->
                                     <?php if($hit->old_price): ?>
-                                      <small><del><?= $hit->old_price ?></del></small>
+                                      <small>
+                                          <del>
+                                              <?= $curr['symbol_left'] . ($hit->old_price * $curr['value']) . $curr['symbol_right'] ?>
+                                          </del>
+                                      </small>
                                     <?php endif; ?>
                                     <!-- end show old price -->
                                 </h4>
