@@ -17,7 +17,7 @@
 </div>
 <!--banner-ends-->
 
-<!--about-starts-->
+<!-- Brands -->
 <?php if($brands): ?>
     <div class="about">
         <div class="container">
@@ -38,9 +38,9 @@
         </div>
     </div>
 <?php endif; ?>
-<!--about-end-->
+<!--end Brands -->
 
-<!--product-starts-->
+<!-- Popular products -->
 <div class="product">
     <div class="container">
         <div class="product-top">
@@ -157,4 +157,4 @@
         </div>
     </div>
 </div>
-<!--product-end-->
+<!-- end Propular products -->
