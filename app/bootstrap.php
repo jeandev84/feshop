@@ -35,3 +35,11 @@ require_once ROOT.'/vendor/autoload.php';
 
 // Include Functions
 require_once LIBS .'/functions.php';
+
+
+// Set aliases
+class_alias('Framework\Routing\Router', 'Router');
+
+
+// Inclure Routes
+require APP.'/routes.php';

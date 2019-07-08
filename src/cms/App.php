@@ -4,7 +4,7 @@ namespace Framework;
 
 use Framework\Container\Registry;
 use Framework\Exception\ErrorHandler;
-
+use Framework\Routing\Router;
 
 
 /**
@@ -45,6 +45,10 @@ class App
 
          // Instancied Error Handler
          new ErrorHandler();
+
+
+         // Dispatch routes
+         Router::dispatch($query);
     }
 
 
