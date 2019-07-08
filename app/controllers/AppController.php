@@ -30,8 +30,8 @@ class AppController extends Controller
         new AppModel();
 
 
-        // set currency in cookie
-        setcookie('currency', 'EUR', time() + 3600*24*7, '/');
+        // set currency in cookie for testing
+        /* setcookie('currency', 'EUR', time() + 3600*24*7, '/'); */
 
 
         // Add all currencies in registry
@@ -41,6 +41,6 @@ class AppController extends Controller
         App::$app->set('currency', Currency::getCurrency(App::$app->get('currencies')));
 
 
-        debug(App::$app->properties());
+        /* debug(App::$app->properties()); */
     }
 }

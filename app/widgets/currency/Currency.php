@@ -2,6 +2,9 @@
 namespace app\widgets\currency;
 
 
+
+use Framework\App;
+
 /**
  * Class Currency
  *
@@ -34,9 +37,15 @@ class Currency
      */
     public function run()
     {
+        // Get currencies
+        $this->currencies = App::$app->get('currencies');
+
+        // Get currency
+        $this->currency = App::$app->get('currency');
+
 
         // Get Html code
-        $this->getHtml();
+        echo $this->getHtml();
     }
 
 
@@ -74,9 +83,15 @@ class Currency
     }
 
 
-
+    /**
+     * Get HTML
+     *
+     * @return void
+     */
     protected function getHtml()
     {
-
+        ob_start();
+        require_once $this->tpl;
+        return ob_get_clean();
     }
 }
