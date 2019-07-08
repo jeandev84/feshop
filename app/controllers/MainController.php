@@ -2,12 +2,13 @@
 namespace app\controllers;
 
 
+
 /**
  * Class MainController
  *
  * @package app\controllers
  */
-class MainController
+class MainController extends AppController
 {
 
     /**
@@ -17,6 +18,10 @@ class MainController
      */
      public function indexAction()
      {
-          die(__METHOD__);
+          debug($this->route);
+
+          $this->setMeta('Главная', 'Описание', 'Ключевики');
+
+          // debug($this->meta);
      }
 }
