@@ -24,24 +24,24 @@
             <div class="col-md-6 top-header-left">
                 <div class="drop">
                     <div class="box">
-                    <!-- Widgets Currency -->
-                    <select id="currency" tabindex="4" class="dropdown drop">
-                        <?php new \app\widgets\currency\Currency() ?>
-                    </select>
-                    <!-- End Widgets currency -->
-                   </div>
-                  <div class="box1">
-                    <!-- Widgets Language -->
-                    <select tabindex="4" class="dropdown">
-                        <option value="" class="label">English :</option>
-                        <option value="1">English</option>
-                        <option value="2">French</option>
-                        <option value="3">German</option>
-                    </select>
-                    <!-- End Widgets Language -->
-                  </div>
-                <div class="clearfix"></div>
-            </div>
+                        <!-- Widgets Currency -->
+                        <select id="currency" tabindex="4" class="dropdown drop">
+                            <?php new \app\widgets\currency\Currency() ?>
+                        </select>
+                        <!-- End Widgets currency -->
+                    </div>
+                    <div class="box1">
+                        <!-- Widgets Language -->
+                        <select tabindex="4" class="dropdown">
+                            <option value="" class="label">English :</option>
+                            <option value="1">English</option>
+                            <option value="2">French</option>
+                            <option value="3">German</option>
+                        </select>
+                        <!-- End Widgets Language -->
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
             <div class="col-md-6 top-header-left">
                 <div class="cart box_1">
@@ -54,9 +54,9 @@
                     <div class="clearfix"> </div>
                 </div>
             </div>
-           <div class="clearfix"></div>
+            <div class="clearfix"></div>
+        </div>
     </div>
-</div>
 </div>
 <!--top-header-->
 <!--start-logo-->

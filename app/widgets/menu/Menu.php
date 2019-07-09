@@ -12,6 +12,11 @@ use R;
 /**
  * Class Menu
  *
+ *  PLUGINS
+ * @github: https://github.com/marioloncarek/megamenu-js
+ * @codepen : https://codepen.io/riogrande/pen/MKXweV
+ *
+ *
  * @package app\widgets\menu
  */
 class Menu
