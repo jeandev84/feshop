@@ -60,7 +60,7 @@ class ProductController extends AppController
 
 
         // Get Gallery images [ Галерея ]
-
+        $galleries = R::findAll('gallery', 'product_id = ?', [$product->id]);
 
         // Modification product [ Модификации ]
 
@@ -69,6 +69,6 @@ class ProductController extends AppController
         $this->setMeta($product->title, $product->description, $product->keywords);
 
         // Parse data to view
-        $this->set(compact('product', 'related'));
+        $this->set(compact('product', 'related', 'galleries'));
     }
 }
