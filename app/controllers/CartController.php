@@ -3,6 +3,7 @@ namespace app\controllers;
 
 
 
+use app\models\Cart;
 use R;
 
 /**
@@ -44,9 +45,19 @@ class CartController extends AppController
                     $mod = R::findOne('modification', 'id = ? AND product_id = ?', [$mod_id, $id]);
                }
 
-               debug($mod);
            }
 
-           die;
+            // Add to cart
+            $cart = new Cart();
+            $cart->addToCart($product, $qty, $mod);
+
+            // if request is ajax
+             if($this->isAjax())
+             {
+                // we'll show modal windows
+                $this->loadView('cart_modal');
+             }
+             // otherwise we'll send user to where he's from
+             redirect();
       }
 }

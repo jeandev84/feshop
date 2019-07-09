@@ -88,6 +88,32 @@ abstract class Controller
     }
 
 
+    /**
+     * Determine if request is ajax
+     *
+     *
+     * @return bool
+     */
+    public function isAjax()
+    {
+        return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest';
+    }
 
-   
+
+    /**
+     * Load View
+     *
+     *
+     * @param $view
+     * @param array $data
+     */
+    public function loadView($view, $data = [])
+    {
+        extract($data);
+        $path = sprintf(APP . "/views/%s%s/%s.php", $this->prefix, $this->controller, $view);
+        require str_replace(['\\', '/'], DIRECTORY_SEPARATOR, $path);
+        die;
+    }
+
+
 }

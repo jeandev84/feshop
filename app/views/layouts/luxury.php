@@ -98,6 +98,8 @@
 
 <!-- Content -->
 <div class="content">
+    <?php // $_SESSION = [];
+    debug($_SESSION); ?>
     <?= $content ?>
 </div>
 <!-- Content -->
@@ -185,7 +187,6 @@ $currency = \Framework\App::$app->get('currency');
 <!-- End declaration variables -->
 
 <script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/simpleCart.min.js"> </script>
 <script src="js/jquery.easydropdown.js"></script>
 
 <!--Slider-Starts-Here-->

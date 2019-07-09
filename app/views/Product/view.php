@@ -78,23 +78,25 @@ debug($categories);
                 <?php endif; ?>
                 <!-- end show price & old price -->
                 <p><?= $product->content ?></p>
-                <div class="available">
-                    <ul>
-                        <li>Color
-                            <select>
-                                <option>Выбрать цвет</option>
-                                <?php foreach($modifications as $mod): ?>
-                                 <option data-title="<?= $mod->title ?>"
-                                         data-price="<?= $mod->price * $curr['value'] ?>"
-                                         value="<?= $mod->id?>">
-                                     <?= $mod->title ?>
-                                 </option>
-                                <?php endforeach; ?>
-                            </select>
-                        </li>
-                        <div class="clearfix"> </div>
-                    </ul>
-                </div>
+               <?php if($modifications): ?>
+                   <div class="available">
+                       <ul>
+                           <li>Color
+                               <select>
+                                   <option>Выбрать цвет</option>
+                                   <?php foreach($modifications as $mod): ?>
+                                       <option data-title="<?= $mod->title ?>"
+                                               data-price="<?= $mod->price * $curr['value'] ?>"
+                                               value="<?= $mod->id?>">
+                                           <?= $mod->title ?>
+                                       </option>
+                                   <?php endforeach; ?>
+                               </select>
+                           </li>
+                           <div class="clearfix"> </div>
+                       </ul>
+                   </div>
+               <?php endif; ?>
                 <ul class="tag-men">
                     <li><span>Category</span>
                         <span>:

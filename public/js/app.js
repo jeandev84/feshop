@@ -29,7 +29,7 @@ $('body').on('click', '.add-to-cart-link', function (e) {
 //
 function showCart(cart)
 {
-   alert(cart);
+   console.log(cart);
 }
 
 
