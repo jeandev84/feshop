@@ -83,7 +83,7 @@ class View
             require_once($viewFile);
             $content = ob_get_clean();
         }else{
-            throw new \Exception(sprintf('Не найден вид [ %s ]', $viewFile));
+            throw new \Exception(sprintf('Не найден вид [ %s ]', $viewFile), 500);
         }
 
         // Layout

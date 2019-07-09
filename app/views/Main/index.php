@@ -65,7 +65,7 @@
                                 </h3>
                                 <p>Explore Now</p>
                                 <h4>
-                                    <a class="add-to-cart-link" href="cart/add?id=<?= $hit->id ?>"><i></i></a>
+                                    <a data-id="<?= $hit->id ?>" class="add-to-cart-link" href="cart/add?id=<?= $hit->id ?>"><i></i></a>
                                     <span class=" item_price">
                                         <!--
                                              must to create function for format_price($price)

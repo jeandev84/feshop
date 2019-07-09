@@ -181,7 +181,7 @@ $currency = \Framework\App::$app->get('currency');
         symbol_left = '<?= $currency['symbol_left'] ?>',
         symbol_right = '<?= $currency['symbol_right'] ?>';
 </script>
-<!--
+
 <!-- End declaration variables -->
 
 <script src="js/jquery-1.11.0.min.js"></script>
