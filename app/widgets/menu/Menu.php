@@ -3,9 +3,11 @@ namespace app\widgets\menu;
 
 
 
+use Framework\App;
 use Framework\Library\Cache;
-use ishop\App;
-use RedBeanPHP\R;
+use R;
+
+
 
 /**
  * Class Menu
@@ -20,6 +22,7 @@ class Menu
      * @var string $menuHtml
      * @var string $tpl
      * @var string $container
+     * @var string $class
      * @var string $table
      * @var string $cache
      * @var int $cacheKey
@@ -32,17 +35,34 @@ class Menu
     protected $menuHtml;
     protected $tpl;
     protected $container = 'ul';
+    protected $class = 'menu';
     protected $table = 'category';
     protected $cache = 3600;
     protected $cacheKey = 'menu_cache';
-    protected $attrs = [];
+    protected $attributes = [];
     protected $prepend = '';
 
 
     /**
      * Menu constructor.
      *
-     * @param $options
+     *  Ex:
+     *  echo new \Project\Widgets\Menu\Menu([
+     *   // 'tpl' => WWW.'/menu/my_menu.php', 'class' => 'my-menu',
+     *      'tpl' => WWW.'/select/select.php',
+     *      'container' => 'select',
+     *      'class' => 'my-menu',
+     *      'table' => 'categories',
+     *      'cache' => 60, // 60s
+     *      'cacheKey' => 'menu_select',
+     *      'attributes' => [
+     *         'id' => 'menu_shop',
+     *         'style' => 'border: 1px solid #ccc;'
+     *      ]
+     * ])
+     *
+     * @param array $options
+     * @return void
      */
     public function __construct($options = [])
     {
@@ -96,6 +116,16 @@ class Menu
                $this->data = R::getAssoc("SELECT * FROM {$this->table}");
            }
 
+           $this->tree = $this->getTree(); // debug($this->tree);
+           $this->menuHtml = $this->getMenuHtml($this->tree);
+
+           // add to cache if $this->cache !== 0
+           if($this->cache)
+           {
+               // set menu cache
+               $cache->set($this->cacheKey, $this->menuHtml, $this->cache);
+           }
+
        }
 
        // get output
@@ -108,7 +138,44 @@ class Menu
      */
     protected function output()
     {
-        echo $this->menuHtml;
+        // echo $this->menuHtml;
+        $attributes = $this->getAttributes();
+        $html = sprintf('<{container} class="%s"%s>%s%s</{container}>',
+            $this->class,
+            $attributes,
+            $this->prepend,
+            $this->menuHtml
+        );
+        echo str_replace('{container}', $this->container, $html);
+
+        /*
+        echo sprintf('<%s class="%s"%s>%s%s</%s>',
+          $this->container,
+          $this->class,
+        $attributes
+          $this->menuHtml,
+          $this->container
+        );
+        */
+    }
+
+
+    /**
+     * Get attributes from options
+     *
+     * @return string
+     */
+    protected function getAttributes()
+    {
+        $str = '';
+        if(!empty($this->attributes))
+        {
+            foreach($this->attributes as $k => $v)
+            {
+                $str .= sprintf(' %s="%s"', $k, $v);
+            }
+        }
+        return $str;
     }
 
 
@@ -119,12 +186,25 @@ class Menu
      */
     protected function getTree()
     {
+        $tree = [];
+        $data = $this->data; // copy data
 
+        // if we use directly $this->>data for populate, data'll be losted
+        foreach($data as $id => &$node)
+        {
+            if(!$node['parent_id'])
+            {
+                $tree[$id] = &$node;
+            }else{
+                $data[$node['parent_id']]['childs'][$id] = &$node;
+            }
+        }
+        return $tree;
     }
 
 
     /**
-     *  Get Menu HTML
+     *  Get Menu HTML [ Recursive ]
      *
      *  Ex: $tab Help we to build this like:
      *  category 1
@@ -134,10 +214,16 @@ class Menu
      *
      * @param $tree
      * @param string $tab
+     * @return string
      */
     protected function getMenuHtml($tree, $tab = '')
     {
-
+        $str = '';
+        foreach($tree as $id => $category)
+        {
+            $str .= $this->catToTemplate($category, $tab, $id);
+        }
+        return $str;
     }
 
 
@@ -148,10 +234,13 @@ class Menu
      * @param $category
      * @param $tab
      * @param $id
+     * @return string
      */
     protected function catToTemplate($category, $tab, $id)
     {
-         
+        ob_start();
+        require $this->tpl;
+        return ob_get_clean();
     }
 
 }
