@@ -3,6 +3,7 @@ namespace app\controllers;
 
 
 
+use app\models\Breadcrumbs;
 use app\models\Product;
 use Framework\App;
 use Framework\Library\Cache;
@@ -44,6 +45,7 @@ class ProductController extends AppController
 
 
         // Get Breadcrumbs   [ Хлебные крошки ]
+        $breadcrumbs = Breadcrumbs::getBreadcrumbs($product->category_id, $product->title);
 
 
         // Get Related products   [ Связанные товары ]
@@ -80,6 +82,6 @@ class ProductController extends AppController
         $this->setMeta($product->title, $product->description, $product->keywords);
 
         // Parse data to view
-        $this->set(compact('product', 'related', 'galleries', 'recentlyViewed'));
+        $this->set(compact('product', 'related', 'galleries', 'recentlyViewed', 'breadcrumbs'));
     }
 }
