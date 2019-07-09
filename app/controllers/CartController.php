@@ -44,9 +44,9 @@ class CartController extends AppController
                     $mod = R::findOne('modification', 'id = ? AND product_id = ?', [$mod_id, $id]);
                }
 
-               // debug($mod);
+               debug($mod);
            }
 
-//           die;
+           die;
       }
 }
