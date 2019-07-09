@@ -26,10 +26,33 @@ $('body').on('click', '.add-to-cart-link', function (e) {
 });
 
 
-//
+/**
+ * Show cart
+ *
+ * @param cart
+ */
 function showCart(cart)
 {
-   console.log(cart);
+     if($.trim(cart) == '<h3>Корзина пуста</h3>')
+     {
+          $('#cart .modal-footer a, #cart .modal-footer .btn-danger').css('display', 'none');
+
+     }else{
+          $('#cart .modal-footer a, #cart .modal-footer .btn-danger').css('display', 'inline-block');
+     }
+
+     $('#cart .modal-body').html(cart);
+     $('#cart').modal();
+
+     if($('.cart-sum').text())
+     {
+          $('.simpleCart_total').html($('#cart .cart-sum').text());
+
+     }else{
+
+          $('.simpleCart_total').text('Empty Cart');
+
+     }
 }
 
 

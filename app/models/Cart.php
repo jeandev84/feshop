@@ -92,11 +92,9 @@ class Cart extends AppModel
 
           // Add quantity
           $this->addQantity($qty);
-         // $_SESSION['cart.qty'] = isset($_SESSION['cart.qty']) ? $_SESSION['cart.qty'] + $qty : $qty;
 
           // Add sum
           $this->addPrice($qty, $price);
-         // $_SESSION['cart.sum'] =  isset($_SESSION['cart.sum']) ? $_SESSION['cart.sum'] + ($qty * ($price * $_SESSION['cart.currency']['value'])) : $qty * ($price * $_SESSION['cart.currency']['value']);
      }
 
 
