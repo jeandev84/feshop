@@ -432,3 +432,7 @@
 =============
 [2019-07-09 07:40:01] Текст ошибки: Controller <b>app\controllers\CategoryController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
 =============
+[2019-07-09 12:20:16] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-09 13:11:30] Текст ошибки: Controller <b>app\controllers\CategoryController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============

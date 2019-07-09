@@ -242,6 +242,15 @@
 <!-- Add own scripts Application -->
 <script src="js/app.js"></script>
 <!-- End scripts -->
+
+
+<?php
+/** Show executed queries: Режим откладки показ все выполненые запросы */
+
+$logs = \R::getDatabaseAdapter()->getDatabase()->getLogger();
+debug($logs->grep('SELECT'));
+?>
+
 </body>
 </html>
 

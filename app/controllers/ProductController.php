@@ -41,11 +41,17 @@ class ProductController extends AppController
             throw new Exception('Страница не найдена', 404);
         }
 
+
         // Get Breadcrumbs   [ Хлебные крошки ]
 
 
         // Get Related products   [ Связанные товары ]
+        $sql = 'SELECT * 
+                FROM related_product 
+                JOIN product ON product.id = related_product.related_id
+                WHERE related_product.product_id = ?';
 
+        $related = R::getAll($sql, [$product->id]);  /* debug($related); */
 
         // Save current product in cookie [ Запись в куки запрошенного товара ]
 
@@ -63,6 +69,6 @@ class ProductController extends AppController
         $this->setMeta($product->title, $product->description, $product->keywords);
 
         // Parse data to view
-        $this->set(compact('product'));
+        $this->set(compact('product', 'related'));
     }
 }
