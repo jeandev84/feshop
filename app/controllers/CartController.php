@@ -96,4 +96,28 @@ class CartController extends AppController
       }
 
 
+    /**
+     * Action clear [ Clear all data from $_SESSION ]
+     *
+     * @return void
+     */
+    public function clearAction()
+    {
+        unset($_SESSION['cart']);
+        unset($_SESSION['cart.qty']);
+        unset($_SESSION['cart.sum']);
+        unset($_SESSION['cart.currency']);
+        $this->loadView('cart_modal');
+    }
+
+
+    /**
+     * View
+     *
+     * @return void
+     */
+    public function viewAction()
+    {
+        $this->setMeta('Корзина');
+    }
 }

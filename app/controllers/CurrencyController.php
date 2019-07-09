@@ -2,6 +2,8 @@
 namespace app\controllers;
 
 
+use app\models\Cart;
+
 /**
  * Class CurrencyController
  *
@@ -32,6 +34,11 @@ class CurrencyController extends AppController
               {
                   // we'll save this currency in cookie , 1 week , on all domain '/'
                   setcookie('currency', $currency, time() + 3600*24*7, '/');
+
+                  // convertor price with choiced course
+                  // [ si le client choisit de voir le montant commande en Euro, Dollars, ...
+                  // alors la methode recalc() fait la convertion de la monaie en cours
+                  Cart::recalc($curr);
               }
           }
 

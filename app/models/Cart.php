@@ -114,6 +114,44 @@ class Cart extends AppModel
     }
 
 
+    /**
+     * Convertor Price [ Calcul price with course ]
+     * Il calcul le prix avec la valeur de la monaie d'echange
+     *
+     * @param $curr
+     * @return void
+     */
+    public static function recalc($curr)
+    {
+        if(isset($_SESSION['cart.currency']))
+        {
+            // change sum [ Price ]
+            if($_SESSION['cart.currency']['base'])
+            {
+                $_SESSION['cart.sum'] *= $curr->value;
+            }else{
+                $_SESSION['cart.sum'] = $_SESSION['cart.sum'] / $_SESSION['cart.currency']['value'] * $curr->value;
+            }
+
+            // change price each product
+            foreach($_SESSION['cart'] as $k => $v)
+            {
+                if($_SESSION['cart.currency']['base'])
+                {
+                    $_SESSION['cart'][$k]['price'] *= $curr->value;
+                }else{
+                    $_SESSION['cart'][$k]['price'] = $_SESSION['cart'][$k]['price'] / $_SESSION['cart.currency']['value'] * $curr->value;
+                }
+            }
+
+            // Rewrite new value course in session [ Перезаписать валюты в сессии ]
+            foreach($curr as $k => $v)
+            {
+                $_SESSION['cart.currency'][$k] = $v;
+            }
+        }
+    }
+
 
     /**
       * Add quantity product to session

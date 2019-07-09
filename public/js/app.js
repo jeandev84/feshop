@@ -95,8 +95,23 @@ $('#cart .modal-body').on('click', '.del-item', function(){
 });
 
 
-/** End Cart */
+/**
+ * Clear Cart
+ */
+function clearCart() {
+     $.ajax({
+          url: '/cart/clear',
+          type: 'GET',
+          success: function(res){
+               showCart(res);
+          },
+          error: function(){
+               alert('Ошибка! Попробуйте позже');
+          }
+     });
+}
 
+/** End Cart */
 
 
 
