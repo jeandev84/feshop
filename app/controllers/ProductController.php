@@ -76,12 +76,17 @@ class ProductController extends AppController
 
 
         // Modification product [ Модификации ]
+        // In this case modification used for choice other color product for exemple.
+        $modifications = R::findAll('modification', 'product_id = ?', [$product->id]);
+
 
 
         // Set meta data
         $this->setMeta($product->title, $product->description, $product->keywords);
 
+
+
         // Parse data to view
-        $this->set(compact('product', 'related', 'galleries', 'recentlyViewed', 'breadcrumbs'));
+        $this->set(compact('product', 'related', 'galleries', 'recentlyViewed', 'breadcrumbs', 'modifications'));
     }
 }

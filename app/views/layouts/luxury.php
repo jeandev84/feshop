@@ -167,6 +167,23 @@
 <!--footer-end-->
 
 <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
+<?php
+
+$currency = \Framework\App::$app->get('currency');
+
+?>
+
+<!-- Defined all globals variables for all scripts -->
+<script>
+    // BASE URL
+    var path = '<?= BASE_URL; ?>',
+        course = '<?= $currency['value'] ?>',
+        symbol_left = '<?= $currency['symbol_left'] ?>',
+        symbol_right = '<?= $currency['symbol_right'] ?>';
+</script>
+<!--
+<!-- End declaration variables -->
+
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/simpleCart.min.js"> </script>
 <script src="js/jquery.easydropdown.js"></script>
