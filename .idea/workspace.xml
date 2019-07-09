@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a0b26f-e7b5-461c-85f2-705793b68eb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/OLD/luxury-backup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/luxury.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/luxury.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/widgets/menu/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/widgets/menu/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menu/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/menu/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/0c3b73fa3a88c806725cf83f7d4e86ef.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/0c3b73fa3a88c806725cf83f7d4e86ef.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/b0b5ccb4a195a07fd3eed14affb8695f.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/b0b5ccb4a195a07fd3eed14affb8695f.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,23 +18,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="424">
+              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
               <folding>
                 <element signature="e#36#54#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/luxury.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="19" column="17" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="19" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -109,7 +94,6 @@
         <option value="$PROJECT_DIR$/config/db.php" />
         <option value="$PROJECT_DIR$/app/bootstrap.php" />
         <option value="$PROJECT_DIR$/schema/2.frontend[user]/db_structure.txt" />
-        <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/public/assets/css/style.css" />
         <option value="$PROJECT_DIR$/src/cms/Container/Registry.php" />
@@ -127,6 +111,7 @@
         <option value="$PROJECT_DIR$/public/menu/menu.php" />
         <option value="$PROJECT_DIR$/app/views/layouts/luxury.php" />
         <option value="$PROJECT_DIR$/app/views/layouts/OLD/luxury-backup.php" />
+        <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
       </list>
     </option>
   </component>
@@ -221,12 +206,12 @@
       <option name="presentableId" value="Default" />
       <updated>1562529313892</updated>
       <workItem from="1562529316011" duration="31559000" />
-      <workItem from="1562580620816" duration="48689000" />
+      <workItem from="1562580620816" duration="49177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80248000" />
+    <option name="totallyTimeSpent" value="80736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -561,16 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#36#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/widgets/menu/Menu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -592,6 +567,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="19" column="17" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="e#36#54#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
