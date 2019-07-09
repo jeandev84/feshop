@@ -12,6 +12,10 @@
 
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 
+    <!-- Style FlexSlider -->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+    <!-- meta data -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -61,7 +65,7 @@
 <!--top-header-->
 <!--start-logo-->
 <div class="logo">
-    <a href="index.html"><h1>Luxury Watches</h1></a>
+    <a href="<?= BASE_URL ?>"><h1>Luxury Watches</h1></a>
 </div>
 <!--start-logo-->
 <!--bottom-header-->
@@ -165,8 +169,6 @@
 <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/simpleCart.min.js"> </script>
-<script type="text/javascript" src="js/memenu.js"></script>
-<script>$(document).ready(function(){$(".memenu").memenu();});</script>
 <script src="js/jquery.easydropdown.js"></script>
 
 <!--Slider-Starts-Here-->
@@ -196,8 +198,25 @@
 <!-- Add Plugins scripts -->
 <script src="megamenu/js/megamenu.js"></script>
 <!-- End Plugins scripts -->
+
+<!-- FlexSlider -->
+<script src="js/imagezoom.js"></script>
+<script defer src="js/jquery.flexslider.js"></script>
+<script>
+    // Can also be used with $(document).ready()
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+    });
+</script>
+<!-- FlexSlider -->
+
+
 <!-- Add own scripts Application -->
 <script src="js/app.js"></script>
 <!-- End scripts -->
 </body>
 </html>
+
