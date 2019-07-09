@@ -3,6 +3,7 @@ namespace app\controllers;
 
 
 
+use app\models\Product;
 use Framework\App;
 use Framework\Library\Cache;
 use Exception;
@@ -54,13 +55,23 @@ class ProductController extends AppController
         $related = R::getAll($sql, [$product->id]);  /* debug($related); */
 
         // Save current product in cookie [ Запись в куки запрошенного товара ]
+        $product_model = new Product();
+        $product_model->setRecentlyViewed($product->id);
 
 
         // Get all viewed products from cookie [ Просмотренные товары ]
+        $r_viewed = $product_model->getRecentlyViewed();
+        $recentlyViewed = null;
+        if($r_viewed)
+        {
+            // R::genSlots($v_viewed)  => implode($r_viewed)
+            $recentlyViewed = R::find('product', 'id IN ('. R::genSlots($r_viewed) .') LIMIT 3', $r_viewed);
+        }
 
 
         // Get Gallery images [ Галерея ]
         $galleries = R::findAll('gallery', 'product_id = ?', [$product->id]);
+
 
         // Modification product [ Модификации ]
 
@@ -69,6 +80,6 @@ class ProductController extends AppController
         $this->setMeta($product->title, $product->description, $product->keywords);
 
         // Parse data to view
-        $this->set(compact('product', 'related', 'galleries'));
+        $this->set(compact('product', 'related', 'galleries', 'recentlyViewed'));
     }
 }

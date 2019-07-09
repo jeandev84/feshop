@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a0b26f-e7b5-461c-85f2-705793b68eb8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/Product/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Product/view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/0c3b73fa3a88c806725cf83f7d4e86ef.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/0c3b73fa3a88c806725cf83f7d4e86ef.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/b0b5ccb4a195a07fd3eed14affb8695f.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/b0b5ccb4a195a07fd3eed14affb8695f.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/errors.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,28 +28,40 @@
         <entry file="file://$PROJECT_DIR$/app/views/layouts/luxury.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="145">
-              <caret line="250" column="29" lean-forward="true" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="71" column="59" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
-              <folding>
-                <element signature="e#36#54#0#PHP" expanded="true" />
-              </folding>
+              <caret line="250" column="29" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+              <folding>
+                <element signature="e#36#59#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/Product/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="30" column="77" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
+            <state relative-caret-position="201">
+              <caret line="198" column="42" lean-forward="true" selection-start-line="198" selection-start-column="42" selection-end-line="198" selection-end-column="42" />
+              <folding>
+                <element signature="e#9490#11853#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,6 +138,7 @@
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/schema/2.frontend[user]/7.RelatedProduct/related_product.txt" />
         <option value="$PROJECT_DIR$/app/views/layouts/luxury.php" />
+        <option value="$PROJECT_DIR$/app/models/Product.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProductController.php" />
         <option value="$PROJECT_DIR$/app/views/Product/view.php" />
       </list>
@@ -134,11 +150,11 @@
       <path value="$PROJECT_DIR$/vendor/gabordemooij/redbean" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="56" />
-    <option name="y" value="10" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="12" />
+    <option name="y" value="18" />
     <option name="width" value="1319" />
-    <option name="height" value="414" />
+    <option name="height" value="368" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -163,7 +179,7 @@
               <item name="eshop.loc" type="b2602c69:ProjectViewProjectNode" />
               <item name="eshop.loc" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -213,22 +229,22 @@
       <updated>1562529313892</updated>
       <workItem from="1562529316011" duration="31559000" />
       <workItem from="1562580620816" duration="59842000" />
-      <workItem from="1562663821332" duration="4550000" />
+      <workItem from="1562663821332" duration="10206000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95951000" />
+    <option name="totallyTimeSpent" value="101607000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="10" width="1319" height="414" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20492454" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19515885" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.16530278" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.07528642" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -249,7 +265,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/params.php" />
     <entry file="file://$PROJECT_DIR$/public/errors/404.html" />
     <entry file="file://$PROJECT_DIR$/config/bootstrap.php" />
     <entry file="file://$PROJECT_DIR$/public/errors/web/index.html" />
@@ -541,7 +556,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/layouts/luxury.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
-          <caret line="250" column="29" lean-forward="true" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
+          <caret line="250" column="29" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -552,20 +567,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="71" column="59" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
-          <folding>
-            <element signature="e#36#54#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="376">
+          <caret line="79" column="60" selection-start-line="79" selection-start-column="60" selection-end-line="79" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Product/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="30" column="77" selection-start-line="30" selection-start-column="77" selection-end-line="30" selection-end-column="77" />
+        <state relative-caret-position="201">
+          <caret line="198" column="42" lean-forward="true" selection-start-line="198" selection-start-column="42" selection-end-line="198" selection-end-column="42" />
+          <folding>
+            <element signature="e#9490#11853#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="e#36#59#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
