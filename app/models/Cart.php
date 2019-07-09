@@ -98,7 +98,24 @@ class Cart extends AppModel
      }
 
 
-     /**
+    /**
+     * Delete Item
+     *
+     * @param int $id
+     * @return void
+     */
+    public function deleteItem($id)
+    {
+        $qtyMinus = $_SESSION['cart'][$id]['qty'];
+        $sumMinus = $_SESSION['cart'][$id]['qty'] * $_SESSION['cart'][$id]['price'];
+        $_SESSION['cart.qty'] -= $qtyMinus;
+        $_SESSION['cart.sum'] -= $sumMinus;
+        unset($_SESSION['cart'][$id]);
+    }
+
+
+
+    /**
       * Add quantity product to session
       *
       * @param $qty

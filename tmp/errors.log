@@ -872,3 +872,13 @@
 =============
 [2019-07-10 00:05:09] Текст ошибки: Controller <b>app\controllers\CategoryController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
 =============
+[2019-07-10 00:12:41] Текст ошибки: Method <b>app\controllers\CartController::showAction</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 00:12:52] Текст ошибки: Method <b>app\controllers\CartController::showAction</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 00:15:31] Текст ошибки: Method <b>app\controllers\CartController::showAction</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 00:18:07] Текст ошибки: Method <b>app\controllers\CartController::showAction</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 00:26:44] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============

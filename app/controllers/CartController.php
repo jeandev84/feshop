@@ -54,10 +54,46 @@ class CartController extends AppController
             // if request is ajax
              if($this->isAjax())
              {
-                // we'll show modal windows
+                // we'll show modal windows [ Модальное Окно ]
                 $this->loadView('cart_modal');
              }
              // otherwise we'll send user to where he's from
              redirect();
       }
+
+
+      /**
+       * Action Show [ Show Modal windows / Модальное окно ]
+       *
+       * @return void
+      */
+      public function showAction()
+      {
+         $this->loadView('cart_modal');
+      }
+
+
+    /**
+     *  Action Delete [ Delete produit ordered ]
+     *
+     * @return void
+     */
+      public function deleteAction()
+      {
+            $id = !empty($_GET['id']) ? $_GET['id'] : null;
+
+            if(isset($_SESSION['cart'][$id]))
+            {
+                $cart = new Cart();
+                $cart->deleteItem($id);
+            }
+
+            if($this->isAjax())
+            {
+                $this->loadView('cart_modal');
+            }
+            redirect();
+      }
+
+
 }
