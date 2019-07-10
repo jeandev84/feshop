@@ -1,0 +1,70 @@
+[2019-07-10 22:25:18] Текст ошибки: Controller <b>app\controllers\admin\MainController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 22:35:28] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\admin\Main\index.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 22:48:16] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 22:48:17] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 22:51:55] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 22:51:55] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 22:54:22] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 22:54:22] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 22:56:12] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 22:56:12] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 22:59:25] Текст ошибки: Controller <b>app\controllers\admin\UserController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:00:08] Текст ошибки: Controller <b>app\controllers\admin\UserController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:00:09] Текст ошибки: Controller <b>app\controllers\admin\UserController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:00:17] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:00:17] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:01:58] Текст ошибки: Controller <b>app\controllers\admin\OrderController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:02:01] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:02:01] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:05:02] Текст ошибки: Controller <b>app\controllers\admin\OrderController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:05:04] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:05:04] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:05:07] Текст ошибки: Controller <b>app\controllers\admin\OrderController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:05:09] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:05:09] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:10:57] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:10:58] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:25:00] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\admin\User\login-admin.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 23:25:24] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\admin\User\login-admin.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 23:25:25] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\admin\User\login-admin.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 23:25:28] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:29:15] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\admin\User\login-admin.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 23:54:54] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:55:25] Текст ошибки: Method <b>app\controllers\admin\UserController::editAction</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:55:28] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 23:55:28] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
