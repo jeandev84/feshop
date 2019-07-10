@@ -4,7 +4,10 @@ namespace app\controllers;
 
 
 use app\models\Cart;
+use app\models\Order;
+use app\models\User;
 use R;
+
 
 /**
  * Class CartController
@@ -76,6 +79,7 @@ class CartController extends AppController
     /**
      *  Action Delete [ Delete produit ordered ]
      *
+     *
      * @return void
      */
       public function deleteAction()
@@ -114,10 +118,66 @@ class CartController extends AppController
     /**
      * View
      *
+     *  URL: http://eshop.loc/cart/view
+     *
      * @return void
      */
     public function viewAction()
     {
         $this->setMeta('Корзина');
+    }
+
+
+    /**
+     * Action checkout
+     *
+     *  URL: http://eshop.loc/cart/checkout
+     * @return void
+     */
+    public function checkoutAction()
+    {
+        if(!empty($_POST))
+        {
+            // if user not authenticate or not registreted
+            if(!User::checkAuth())
+            {
+                // we'll registrate user
+                $user = new User();
+                $data = $_POST;
+
+                // load data from POST
+                $user->load($data);
+
+                // validation
+                if(!$user->validate($data) || !$user->checkUnique())
+                {
+                    $user->getErrors();
+                    $_SESSION['form_data'] = $data;
+                    redirect();
+
+                }else{
+
+                    $user->attributes['password'] = password_hash(
+                        $user->attributes['password'],
+                        PASSWORD_DEFAULT
+                    );
+
+                    if(!$user_id = $user->save('user'))
+                    {
+                        $_SESSION['error'] = 'Ошибка!';
+                        redirect();
+                    }
+
+                }
+            }
+
+            // save order into database [ сохранение заказа ] and send mail
+            $data['user_id'] = isset($user_id) ? $user_id : $_SESSION['user']['id'];
+            $data['note'] = !empty($_POST['note']) ? $_POST['note'] : '';
+            $user_email   = isset($_SESSION['user']['email']) ? $_SESSION['user']['email'] : $_POST['email'];
+            $order_id = Order::saveOrder($data);
+            Order::mailOrder($order_id, $user_email);
+        }
+        redirect();
     }
 }

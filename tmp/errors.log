@@ -1012,3 +1012,14 @@
 =============
 [2019-07-10 12:39:42] РўРµРєСЃС‚ РѕС€РёР±РєРё: РЎС‚СЂР°РЅРёС†Р° РЅРµ РЅР°Р№РґРµРЅР°! | Р¤Р°Р№Р»: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | РЎС‚СЂРѕРєР°: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
 =============
+[2019-07-10 16:01:34] РўРµРєСЃС‚ РѕС€РёР±РєРё: РќРµ РЅР°Р№РґРµРЅ РІРёРґ [ D:\OSPanel\domains\eshop.loc\app\views\Cart\view.php ] | Р¤Р°Р№Р»: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | РЎС‚СЂРѕРєР°: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 17:08:54] РўРµРєСЃС‚ РѕС€РёР±РєРё: Connection could not be established with host smtp.gmail.com [Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+ #10060] | Р¤Р°Р№Р»: D:\OSPanel\domains\eshop.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php | РЎС‚СЂРѕРєР°: D:\OSPanel\domains\eshop.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php
+=============
+[2019-07-10 17:24:38] РўРµРєСЃС‚ РѕС€РёР±РєРё: Connection could not be established with host smtp.gmail.com [Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+ #10060] | Р¤Р°Р№Р»: D:\OSPanel\domains\eshop.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php | РЎС‚СЂРѕРєР°: D:\OSPanel\domains\eshop.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php
+=============
+[2019-07-10 17:34:39] РўРµРєСЃС‚ РѕС€РёР±РєРё: Connection could not be established with host smtp.gmail.com [Попытка установить соединение была безуспешной, т.к. от другого компьютера за требуемое время не получен нужный отклик, или было разорвано уже установленное соединение из-за неверного отклика уже подключенного компьютера.
+ #10060] | Р¤Р°Р№Р»: D:\OSPanel\domains\eshop.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php | РЎС‚СЂРѕРєР°: D:\OSPanel\domains\eshop.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php
+=============
