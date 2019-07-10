@@ -53,6 +53,17 @@ class UserController extends AppController
                 }else{
                     $_SESSION['error'] = 'Ошибка!';
                 }
+
+                /**
+                 Login automatique user after registration:
+                 if($userId = $user->save('user'))
+                 {
+                     $_SESSION['success'] = 'Пользователь зарегистрирован';
+                     $_SESSION['user'][$userId] = $user;
+                 }else{
+                    $_SESSION['error'] = 'Ошибка!';
+                 }
+                 **/
             }
             redirect();
         }
