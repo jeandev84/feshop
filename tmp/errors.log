@@ -966,3 +966,37 @@
 =============
 [2019-07-10 03:47:00] Текст ошибки: Controller <b>app\controllers\CategoryController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
 =============
+[2019-07-10 03:51:41] Текст ошибки: Controller <b>app\controllers\CategoryController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 03:52:42] Текст ошибки: Controller <b>app\controllers\CategoryController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 03:52:43] Текст ошибки: Controller <b>app\controllers\CategoryController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 04:05:52] Текст ошибки: Страница не найдена | Файл: D:\OSPanel\domains\eshop.loc\app\controllers\CategoryController.php | Строка: D:\OSPanel\domains\eshop.loc\app\controllers\CategoryController.php
+=============
+[2019-07-10 04:06:23] Текст ошибки: Страница не найдена | Файл: D:\OSPanel\domains\eshop.loc\app\controllers\CategoryController.php | Строка: D:\OSPanel\domains\eshop.loc\app\controllers\CategoryController.php
+=============
+[2019-07-10 04:25:52] Текст ошибки: Страница не найдена | Файл: D:\OSPanel\domains\eshop.loc\app\controllers\CategoryController.php | Строка: D:\OSPanel\domains\eshop.loc\app\controllers\CategoryController.php
+=============
+[2019-07-10 04:36:23] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 04:36:33] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 04:39:39] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 04:39:41] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 04:44:56] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 04:45:03] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 04:45:21] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 04:45:29] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 04:46:24] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 04:46:51] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 04:48:42] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
