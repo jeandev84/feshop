@@ -51,6 +51,8 @@ class User extends AppModel
     /**
      * Check Unique fields
      *
+     *
+     * @return bool
      */
      public function checkUnique()
      {
@@ -73,4 +75,64 @@ class User extends AppModel
          }
          return true;
      }
+
+     /**
+      * Login User
+      *
+      *
+      * @param bool $isAdmin
+      * @return bool
+     */
+     public function login($isAdmin = false)
+     {
+        $login = !empty(trim($_POST['login'])) ? trim($_POST['login']) : null;
+        $password = !empty(trim($_POST['password'])) ? trim($_POST['password']) : null;
+
+        if($login && $password)
+        {
+            if($isAdmin)
+            {
+                $user = \R::findOne('user', "login = ? AND role = 'admin'", [$login]);
+            }else{
+                $user = \R::findOne('user', "login = ?", [$login]);
+            }
+
+            if($user)
+            {
+                if(password_verify($password, $user->password))
+                {
+                    foreach($user as $k => $v)
+                    {
+                        // keep [ password ] put all attributes without 'password'
+                        if($k != 'password'){ $_SESSION['user'][$k] = $v; }
+                    }
+                    return true;
+                }
+            }
+        }
+        return false;
+     }
+
+
+    /**
+     * Determine if user authenticate [ is logged ]
+     *
+     * @return bool
+     */
+    public static function checkAuth()
+    {
+        return isset($_SESSION['user']);
+    }
+
+
+
+    /**
+     * Determine if current user is admin
+     *
+     * @return bool
+     */
+    public static function isAdmin()
+    {
+        return (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin');
+    }
 }
