@@ -34,16 +34,21 @@
                     </select>
                     <!-- End Widgets currency -->
                    </div>
-                  <div class="box1">
-                    <!-- Widgets Language -->
-                    <select tabindex="4" class="dropdown">
-                        <option value="" class="label">English :</option>
-                        <option value="1">English</option>
-                        <option value="2">French</option>
-                        <option value="3">German</option>
-                    </select>
-                    <!-- End Widgets Language -->
-                  </div>
+
+                    <!-- User Registration -->
+                    <div class="btn-group">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <?php if(!empty($_SESSION['user'])): ?>
+                                <li><a href="#">Добро пожаловать, <?=h($_SESSION['user']['name']);?></a></li>
+                                <li><a href="user/logout">Выход</a></li>
+                            <?php else: ?>
+                                <li><a href="user/login">Вход</a></li>
+                                <li><a href="user/signup">Регистрация</a></li>
+                            <?php endif; ?>
+                        </ul>
+                    </div>
+                    <!-- End Registration -->
                 <div class="clearfix"></div>
             </div>
             </div>

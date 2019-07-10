@@ -47,7 +47,7 @@ class CategoryController extends AppController
          // Get alias
          $alias = $this->route['alias'];
 
-         // find categories by alias
+         // find one category by alias
          $category = R::findOne('category', 'alias = ?', [$alias]);
 
          // if not found category

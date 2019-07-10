@@ -1000,3 +1000,15 @@
 =============
 [2019-07-10 04:48:42] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\Category\view.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
 =============
+[2019-07-10 07:38:20] Текст ошибки: Controller <b>app\controllers\UserController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 07:38:26] Текст ошибки: Controller <b>app\controllers\UserController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 07:38:31] Текст ошибки: Controller <b>app\controllers\UserController</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 07:44:31] Текст ошибки: Method <b>app\controllers\UserController::signupAction</b> does not exist! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============
+[2019-07-10 12:31:08] Текст ошибки: Не найден вид [ D:\OSPanel\domains\eshop.loc\app\views\User\signup.php ] | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Template\View.php
+=============
+[2019-07-10 12:39:42] Текст ошибки: Страница не найдена! | Файл: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php | Строка: D:\OSPanel\domains\eshop.loc\src\cms\Routing\Router.php
+=============

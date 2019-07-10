@@ -24,4 +24,27 @@ abstract class Model
     {
         DB::instance();
     }
+
+    /**
+     * Assign attributes value
+     *
+     * Ex:
+     *  $data = $_POST
+     *
+     * if(isset($data['name'])) {
+     *    $this->attributes['name'] = $data['name'];
+     * }
+     * @param $data
+     *
+     */
+    public function load($data)
+    {
+        foreach($this->attributes as $name => $value)
+        {
+            if(isset($data[$name]))
+            {
+                $this->attributes[$name] = $data[$name];
+            }
+        }
+    }
 }
