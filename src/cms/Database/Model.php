@@ -3,6 +3,8 @@ namespace Framework\Database;
 
 
 use Valitron\Validator;
+use R;
+
 
 /**
  * Class Model
@@ -17,6 +19,7 @@ abstract class Model
     protected $attributes = [];
     public $errors = [];
     public $rules  = [];
+    public $table;
 
 
     /**
@@ -79,6 +82,23 @@ abstract class Model
          // get errors
          $this->errors = $validator->errors();
          return false;
+    }
+
+
+    /**
+     * Save data in to database
+     *
+     * @return bool|int [ return lastInsertId or false if not saved data ]
+     */
+    public function save()
+    {
+       $tbl = R::dispense($this->table);
+       foreach ($this->attributes as $name => $value)
+       {
+           $tbl->{$name} = $value;
+       }
+
+       return R::store($tbl);
     }
 
 

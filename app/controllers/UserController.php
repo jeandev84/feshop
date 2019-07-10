@@ -33,14 +33,26 @@ class UserController extends AppController
             // debug($user);
 
             // if is not valide data
-            if(!$user->validate($data))
+            if(!$user->validate($data) || !$user->checkUnique())
             {
                  // get errors and saved in errors
                 $user->getErrors();
                 $_SESSION['form_data'] = $data;
 
             }else{
-                $_SESSION['success'] = 'OK';
+                // Before save
+                $user->attributes['password'] = password_hash(
+                    $user->attributes['password'],
+                    PASSWORD_DEFAULT
+                );
+
+                // save
+                if($user->save('user'))
+                {
+                    $_SESSION['success'] = 'Пользователь зарегистрирован';
+                }else{
+                    $_SESSION['error'] = 'Ошибка!';
+                }
             }
             redirect();
         }
