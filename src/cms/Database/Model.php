@@ -2,6 +2,8 @@
 namespace Framework\Database;
 
 
+use Valitron\Validator;
+
 /**
  * Class Model
  *
@@ -47,4 +49,57 @@ abstract class Model
             }
         }
     }
+
+
+    /**
+     * Validate data
+     *
+     * @return bool
+     */
+    public function validate($data)
+    {
+         // set Lang Directory
+         Validator::langDir(WWW.'/validator/lang');
+
+         // set current language
+         Validator::lang('ru');
+
+         // set new instance of validator
+         $validator = new Validator($data);
+
+         // set rules
+         $validator->rules($this->rules);
+
+         // is valid rules
+         if($validator->validate())
+         {
+             return true;
+         }
+
+         // get errors
+         $this->errors = $validator->errors();
+         return false;
+    }
+
+
+    /**
+     * Get Errors HTML
+     *
+     * @return void
+     */
+    public function getErrors()
+    {
+        $errors = '<ul>';
+        foreach($this->errors as $error)
+        {
+            foreach ($error as $item)
+            {
+                $errors .= sprintf('<li>%s</li>', $item);
+            }
+        }
+        $errors .= '</ul>';
+        $_SESSION['error'] = $errors;
+    }
+
+
 }

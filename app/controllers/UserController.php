@@ -21,11 +21,28 @@ class UserController extends AppController
     {
         if(!empty($_POST))
         {
+            // new instance of user
             $user = new User();
+
+            // storage data $_POST in variable $data
             $data = $_POST;
+
+            // assign user attributes from data $_POST
             $user->load($data);
 
-            debug($user);
+            // debug($user);
+
+            // if is not valide data
+            if(!$user->validate($data))
+            {
+                 // get errors and saved in errors
+                $user->getErrors();
+                $_SESSION['form_data'] = $data;
+
+            }else{
+                $_SESSION['success'] = 'OK';
+            }
+            redirect();
         }
 
         $this->setMeta('Регистрация');
