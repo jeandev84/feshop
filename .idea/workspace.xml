@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a0b26f-e7b5-461c-85f2-705793b68eb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/luxury.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/luxury.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/libs/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/libs/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/0c3b73fa3a88c806725cf83f7d4e86ef.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/0c3b73fa3a88c806725cf83f7d4e86ef.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/b0b5ccb4a195a07fd3eed14affb8695f.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/b0b5ccb4a195a07fd3eed14affb8695f.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/errors.log" afterDir="false" />
@@ -27,26 +25,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/luxury.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1613">
-              <caret line="99" column="53" lean-forward="true" selection-start-line="99" selection-start-column="53" selection-end-line="99" selection-end-column="53" />
+            <state relative-caret-position="87">
+              <caret line="199" column="18" lean-forward="true" selection-start-line="199" selection-start-column="18" selection-end-line="199" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app.js">
+        <entry file="file://$PROJECT_DIR$/app/controllers/SearchController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+            <state relative-caret-position="390">
+              <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/SearchController.php">
+        <entry file="file://$PROJECT_DIR$/app/views/Search/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+            <state relative-caret-position="102">
+              <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -68,7 +66,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/cms/Exception/ErrorHandler.php" />
         <option value="$PROJECT_DIR$/public/errors/404.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/app/controllers/PageController.php" />
@@ -105,7 +102,6 @@
         <option value="$PROJECT_DIR$/app/views/Main/index.php" />
         <option value="$PROJECT_DIR$/app/views/Cart/add.php" />
         <option value="$PROJECT_DIR$/src/cms/Template/View.php" />
-        <option value="$PROJECT_DIR$/src/libs/functions.php" />
         <option value="$PROJECT_DIR$/src/cms/Routing/Controller.php" />
         <option value="$PROJECT_DIR$/app/models/cart.txt" />
         <option value="$PROJECT_DIR$/schema/2.frontend[user]/11.Cart/cart.txt" />
@@ -119,6 +115,8 @@
         <option value="$PROJECT_DIR$/app/views/layouts/luxury.php" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/app/controllers/SearchController.php" />
+        <option value="$PROJECT_DIR$/src/libs/functions.php" />
+        <option value="$PROJECT_DIR$/app/views/Search/index.php" />
       </list>
     </option>
   </component>
@@ -128,9 +126,9 @@
       <path value="$PROJECT_DIR$/vendor/gabordemooij/redbean" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-25" />
-    <option name="y" value="404" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-152" />
+    <option name="y" value="42" />
     <option name="width" value="1319" />
     <option name="height" value="380" />
   </component>
@@ -156,13 +154,13 @@
             <path>
               <item name="eshop.loc" type="b2602c69:ProjectViewProjectNode" />
               <item name="eshop.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="eshop.loc" type="b2602c69:ProjectViewProjectNode" />
               <item name="eshop.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -215,18 +213,18 @@
       <updated>1562529313892</updated>
       <workItem from="1562529316011" duration="31559000" />
       <workItem from="1562580620816" duration="59842000" />
-      <workItem from="1562663821332" duration="49432000" />
+      <workItem from="1562663821332" duration="50982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140833000" />
+    <option name="totallyTimeSpent" value="142383000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-25" y="404" width="1319" height="380" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20492454" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19515885" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -251,13 +249,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/AppModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cms/Database/Model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
@@ -489,13 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/libs/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/cart.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -579,13 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/luxury.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1613">
-          <caret line="99" column="53" lean-forward="true" selection-start-line="99" selection-start-column="53" selection-end-line="99" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-157">
@@ -595,15 +572,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        <state>
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/luxury.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="199" column="18" lean-forward="true" selection-start-line="199" selection-start-column="18" selection-end-line="199" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/libs/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+        <state relative-caret-position="390">
+          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Search/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
         </state>
       </provider>
     </entry>

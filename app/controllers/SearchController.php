@@ -15,7 +15,8 @@ class SearchController extends AppController
     /**
      * Action
      *
-     * URL: /search/typeahead?query=casio
+     * Exemple URL: http://eshop.loc/typeahead?query=casio
+     *
      * @return void
      */
     public function typeaheadAction()
@@ -37,5 +38,24 @@ class SearchController extends AppController
         }
 
         die;
+    }
+
+
+    /**
+     * Action index
+     *
+     * Exemple URL: http://eshop.loc/search?s=casio
+     *
+     * @return void
+     */
+    public function indexAction()
+    {
+        $query = !empty(trim($_GET['s'])) ? trim($_GET['s']) : null;
+        if($query)
+        {
+            $products = \R::find('product', "title LIKE ? AND status = '1'", ["%{$query}%"]);
+        }
+        $this->setMeta('Поиск по: ' . h($query));
+        $this->set(compact('products', 'query'));
     }
 }

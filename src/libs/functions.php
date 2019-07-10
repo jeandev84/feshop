@@ -54,6 +54,7 @@ function redirect($http = false)
 /**
  * Escapce bad str
  *
+ *  By default encoding UTF-8
  * @param $str
  * @return string
  */
