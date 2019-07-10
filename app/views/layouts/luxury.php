@@ -92,12 +92,20 @@
                 <!-- END WIDGET MENU -->
                 <div class="clearfix"> </div>
             </div>
+            <!-- SEARCH BAR -->
             <div class="col-md-3 header-right">
                 <div class="search-bar">
+                    <form action="search" method="GET" autocomplete="off">
+                        <input type="text" class="typeahead" id="typeahead" name="s">
+                        <input type="submit" value="">
+                    </form>
+                    <!--
                     <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
                     <input type="submit" value="">
+                    -->
                 </div>
             </div>
+            <!-- END SERACH BAR -->
             <div class="clearfix"> </div>
         </div>
     </div>
@@ -217,6 +225,7 @@ $currency = \Framework\App::$app->get('currency');
 
 <script src="js/jquery-1.11.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/typeahead.bundle.js"></script>
 <script src="js/jquery.easydropdown.js"></script>
 
 <!--Slider-Starts-Here-->

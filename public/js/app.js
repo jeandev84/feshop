@@ -1,6 +1,37 @@
-/**
- * Cart [ Add to cart ]
- */
+/**----------------------------------------------------------
+ * Search Bar [ Using Plugin typeahead ]
+ -----------------------------------------------------------*/
+
+var products = new Bloodhound({
+     datumTokenizer: Bloodhound.tokenizers.whitespace,
+     queryTokenizer: Bloodhound.tokenizers.whitespace,
+     remote: {
+          wildcard: '%QUERY', // marker will be replaced by query %QUERY
+          url: path + '/search/typeahead?query=%QUERY'
+     }
+});
+
+products.initialize();
+
+$("#typeahead").typeahead({
+     // hint: false,
+     highlight: true
+},{
+     name: 'products',
+     display: 'title',
+     limit: 10,
+     source: products
+});
+
+$('#typeahead').bind('typeahead:select', function(ev, suggestion) {
+     // console.log(suggestion);
+     window.location = path + '/search/?s=' + encodeURIComponent(suggestion.title);
+});
+
+
+/**----------------------------------------------
+ * Cart Product [ Корзина Товара ]
+ ------------------------------------------**/
 
 $('body').on('click', '.add-to-cart-link', function (e) {
     e.preventDefault();
@@ -115,9 +146,9 @@ function clearCart() {
 
 
 
-/**
+/**--------------------------------------------------------
  * Relocate target currency
- */
+ ----------------------------------------------------------*/
 $('#currency').change(function () {
 
      window.location = 'currency/change?curr=' + $(this).val();
@@ -127,9 +158,9 @@ $('#currency').change(function () {
 
 
 
-/**
+/** --------------------------------------------------------
  * Modification for change color on product/view
- */
+ -----------------------------------------------------------*/
 $('.available select').on('change', function () {
 
      var modId = $(this).val(),
@@ -151,3 +182,5 @@ $('.available select').on('change', function () {
      }
 
 });
+
+
