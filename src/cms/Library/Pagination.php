@@ -205,10 +205,18 @@ class Pagination
       */
        public function getParams()
        {
-           # LINK AFTER : http://eshop.loc/category/casio?page=2&sort=name&filter=1,2,3
+           # LINK BEFORE : http://eshop.loc/category/casio?page=2&sort=name&filter=1,2,3
            $url = $_SERVER['REQUEST_URI'];
-           $url = explode('?', $url);
 
+           # Remove param double filter param
+           preg_match_all("#filter=[\d,&]#", $url, $matches);
+           if(count($matches[0]) > 1)
+           {
+               $url = preg_replace("#filter=[\d,&]+#", "", $url, 1);
+           }
+
+           # Find all params without page='...'
+           $url = explode('?', $url);
            $uri = $url[0] . '?';
 
            if(isset($url[1]) && $url[1] != '')

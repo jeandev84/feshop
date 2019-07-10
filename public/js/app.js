@@ -1,4 +1,59 @@
 /**----------------------------------------------------------
+ * Filters
+ -----------------------------------------------------------*/
+$('body').on('change', '.w_sidebar input', function(){
+     var checked = $('.w_sidebar input:checked'),
+         data = '';
+
+     // console.log(checked);
+
+     checked.each(function () {
+          data += this.value + ',';
+     });
+
+     // console.log(data);
+     if(data)
+     {
+          $.ajax({
+               url: location.href,
+               data: {filter: data},
+               type: 'GET',
+               beforeSend: function()
+               {
+                    $('.preloader').fadeIn(300, function(){
+                         $('.product-one').hide();
+                    });
+               },
+               success: function(res)
+               {
+                    $('.preloader').delay(500).fadeOut('slow', function(){
+                         $('.product-one').html(res).fadeIn();
+
+                         // Без пезагрузки страницы
+                         // и все что было в адрессный строке сохранилось, запомнялось и учитивалось
+                         // сохранение будет в history [ читать про history JS ]
+                         // history позволяет менять соддержимое браузера
+                         // http://eshop.loc/category/elektronnye?filter=1,6,
+
+                         var url = location.search.replace(/filter(.+?)(&|$)/g, ''); //$2
+                         var newURL = location.pathname + url + (location.search ? "&" : "?") + "filter=" + data;
+                         newURL = newURL.replace('&&', '&');
+                         newURL = newURL.replace('?&', '?');
+                         history.pushState({}, '', newURL);
+                    });
+               },
+               error: function () {
+                    alert('Ошибка!');
+               }
+          });
+     }else{
+          // перепросить страничку
+          window.location = location.pathname;
+     }
+});
+
+
+/**----------------------------------------------------------
  * Search Bar [ Using Plugin typeahead ]
  -----------------------------------------------------------*/
 

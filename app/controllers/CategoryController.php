@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Breadcrumbs;
 use app\models\Category;
+use app\widgets\filter\Filter;
 use Exception;
 use Framework\App;
 use Framework\Library\Pagination;
@@ -25,6 +26,21 @@ use R;
         [countPages] => 7
         [uri] => /category/casio?sort=name&filter=1,2,3&
     )
+ *
+ *   Filter
+ *     http://eshop.loc/category/elektronnye?filter=1,6,...
+ *     // Ajax for preloader
+ *       if($this->isAjax())
+ *       {
+ *          debug($_GET);
+ *         die;
+ *       }
+ *
+ *      Array
+       (
+          [category/elektronnye] =>
+          [filter] => 1,6,
+        )
 
  */
 class CategoryController extends AppController
@@ -71,16 +87,57 @@ class CategoryController extends AppController
          //--- Pagination
          $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
          $perpage = App::$app->get('perpage');
-         $total = R::count('product', "category_id IN ($ids)");
+
+
+         // Initialise sql part
+         $sql_part = '';
+
+         // Get filter params from URL
+         if(!empty($_GET['filter']))
+         {
+             /* $filter = $_GET['filter']; */
+             /*
+               SELECT `product`.*  FROM `product`  WHERE category_id IN (6) AND id IN
+               (
+                   SELECT product_id
+                   FROM attribute_product
+                   WHERE attr_id IN (1,5)
+                   GROUP BY product_id
+                   HAVING COUNT(product_id) = 2
+               )
+           */
+             $filter = Filter::getFilter();
+             if($filter)
+             {
+                 $cnt = Filter::getCountGroups($filter);
+                 $sql_part = "AND id IN (
+                     SELECT product_id 
+                     FROM attribute_product 
+                     WHERE attr_id IN ($filter) 
+                     GROUP BY product_id 
+                     HAVING COUNT(product_id) = $cnt)
+                     ";
+             }
+         }
+
+
+         $total = R::count('product', "category_id IN ($ids) $sql_part");
          $pagination = new Pagination($page, $perpage, $total);
          $start = $pagination->getStart();
 
 
          // Get products
-         $products = R::find('product', "category_id IN ($ids) LIMIT $start, $perpage");
+         $products = R::find('product', "category_id IN ($ids) $sql_part LIMIT $start, $perpage");
 
          /* debug($products); */
 
+         // Ajax for preloader
+         if($this->isAjax())
+         {
+             $this->loadView('filter', compact('products', 'total', 'pagination'));
+         }
+
+         // set meta datas
          $this->setMeta($category->title, $category->description, $category->keywords);
 
          // Parse data to view

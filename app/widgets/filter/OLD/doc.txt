@@ -1,0 +1,207 @@
+
+BEFORE:
+
+$this->groups = R::getAssoc('SELECT id, title FROM attribute_group');
+Array
+(
+    [1] => Механизм
+    [2] => Стекло
+    [3] => Ремешок
+    [4] => Корпус
+    [5] => Индикация
+)
+
+BEFORE:
+
+$this->attrs = ::getAssoc('SELECT * FROM attribute_value');
+Array
+(
+    [1] => Array
+        (
+            [value] => Механика с автоподзаводом
+            [attr_group_id] => 1
+        )
+
+    [2] => Array
+        (
+            [value] => Механика с ручным заводом
+            [attr_group_id] => 1
+        )
+
+    [3] => Array
+        (
+            [value] => Кварцевый от батарейки
+            [attr_group_id] => 1
+        )
+
+    [4] => Array
+        (
+            [value] => Кварцевый от солнечного аккумулятора
+            [attr_group_id] => 1
+        )
+
+    [5] => Array
+        (
+            [value] => Сапфировое
+            [attr_group_id] => 2
+        )
+
+    [6] => Array
+        (
+            [value] => Минеральное
+            [attr_group_id] => 2
+        )
+
+    [7] => Array
+        (
+            [value] => Полимерное
+            [attr_group_id] => 2
+        )
+
+    [8] => Array
+        (
+            [value] => Стальной
+            [attr_group_id] => 3
+        )
+
+    [9] => Array
+        (
+            [value] => Кожаный
+            [attr_group_id] => 3
+        )
+
+    [10] => Array
+        (
+            [value] => Каучуковый
+            [attr_group_id] => 3
+        )
+
+    [11] => Array
+        (
+            [value] => Полимерный
+            [attr_group_id] => 3
+        )
+
+    [12] => Array
+        (
+            [value] => Нержавеющая сталь
+            [attr_group_id] => 4
+        )
+
+    [13] => Array
+        (
+            [value] => Титановый сплав
+            [attr_group_id] => 4
+        )
+
+    [14] => Array
+        (
+            [value] => Латунь
+            [attr_group_id] => 4
+        )
+
+    [15] => Array
+        (
+            [value] => Полимер
+            [attr_group_id] => 4
+        )
+
+    [16] => Array
+        (
+            [value] => Керамика
+            [attr_group_id] => 4
+        )
+
+    [17] => Array
+        (
+            [value] => Алюминий
+            [attr_group_id] => 4
+        )
+
+    [18] => Array
+        (
+            [value] => Аналоговые
+            [attr_group_id] => 5
+        )
+
+    [19] => Array
+        (
+            [value] => Цифровые
+            [attr_group_id] => 5
+        )
+
+)
+
+======================================================================
+AFTER:
+function getAttrs()
+{
+
+    $data = R::getAssoc('SELECT * FROM attribute_value');
+
+    $attrs = [];
+    foreach ($data as $k => $v)
+    {
+      $attrs[$v['attr_group_id']][$k] = $v['value'];
+    }
+    return $attrs;
+
+}
+
+$this->attrs = $this->getAttrs();
+
+Array
+(
+    [1] => Array
+        (
+            [1] => Механика с автоподзаводом
+            [2] => Механика с ручным заводом
+            [3] => Кварцевый от батарейки
+            [4] => Кварцевый от солнечного аккумулятора
+        )
+
+    [2] => Array
+        (
+            [5] => Сапфировое
+            [6] => Минеральное
+            [7] => Полимерное
+        )
+
+    [3] => Array
+        (
+            [8] => Стальной
+            [9] => Кожаный
+            [10] => Каучуковый
+            [11] => Полимерный
+        )
+
+    [4] => Array
+        (
+            [12] => Нержавеющая сталь
+            [13] => Титановый сплав
+            [14] => Латунь
+            [15] => Полимер
+            [16] => Керамика
+            [17] => Алюминий
+        )
+
+    [5] => Array
+        (
+            [18] => Аналоговые
+            [19] => Цифровые
+        )
+
+)
+
+
+========================================
+For generate HTML code
+
+attribute_group .
+add new field named 'type'
+type: select | boolean | string | int
+
+boolean : input radiobox field
+select  : input select field
+string  : input type text
+int     : input type number

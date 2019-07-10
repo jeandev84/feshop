@@ -2,7 +2,13 @@
 <html>
 <head>
     <base href="/">
+    <!-- Load setted meta data -->
     <?= $this->getMeta() ?>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/star.png" type="image/png" />
+
+    <!-- bootstrap style -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 
     <!-- style megamenu plugins -->
@@ -224,9 +230,11 @@
         </div>
     </div>
 </div>
-
-<!--<div class="preloader"><img src="images/ring.svg" alt=""></div>-->
 <!-- End Modal -->
+
+<!-- Preloader -->
+<div class="preloader"><img src="images/ring.svg" alt=""></div>
+<!-- End Preloader -->
 
 <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
 <?php
