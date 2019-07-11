@@ -1,7 +1,9 @@
+/** DELETE CONFIRM */
 $('.delete').click(function(){
     var res = confirm('Подтвердите действие');
     if(!res) return false;
 });
+
 
 $('.del-item').on('click', function(){
     var res = confirm('Подтвердите действие');

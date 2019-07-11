@@ -202,7 +202,7 @@ function clearCart() {
 
 
 /**--------------------------------------------------------
- * Relocate target currency
+ * Relocate target currency [ Change Course ]
  ----------------------------------------------------------*/
 $('#currency').change(function () {
 
