@@ -1,5 +1,4 @@
 <?php
-
 namespace app\models\admin;
 
 use app\models\AppModel;

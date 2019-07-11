@@ -1,11 +1,20 @@
 <?php
-
 namespace app\models\admin;
 
 use app\models\AppModel;
 
-class Product extends AppModel {
 
+/**
+ * Class Product
+ *
+ * @package app\models\admin
+ */
+class Product extends AppModel
+{
+
+    /**
+     * @var array $attributes
+     */
     public $attributes = [
         'title' => '',
         'category_id' => '',
@@ -16,9 +25,12 @@ class Product extends AppModel {
         'content' => '',
         'status' => '',
         'hit' => '',
-        'alias' => '',
+        'alias' => '', // generated dynamically and image [ img ]
     ];
 
+    /**
+     * @var array $rules
+     */
     public $rules = [
         'required' => [
             ['title'],
@@ -30,8 +42,17 @@ class Product extends AppModel {
         ],
     ];
 
-    public function editRelatedProduct($id, $data){
+    /**
+     * Edit Related Product
+     *
+     *
+     * @param $id
+     * @param $data
+     */
+    public function editRelatedProduct($id, $data)
+    {
         $related_product = \R::getCol('SELECT related_id FROM related_product WHERE product_id = ?', [$id]);
+
         // если менеджер убрал связанные товары - удаляем их
         if(empty($data['related']) && !empty($related_product)){
             \R::exec("DELETE FROM related_product WHERE product_id = ?", [$id]);
@@ -50,7 +71,9 @@ class Product extends AppModel {
         }
         // если изменились связанные товары - удалим и запишем новые
         if(!empty($data['related'])){
+
             $result = array_diff($related_product, $data['related']);
+
             if(!empty($result) || count($related_product) != count($data['related'])){
                 \R::exec("DELETE FROM related_product WHERE product_id = ?", [$id]);
                 $sql_part = '';
@@ -64,7 +87,15 @@ class Product extends AppModel {
         }
     }
 
-    public function editFilter($id, $data){
+    /**
+     * Edit Filter
+     *
+     *
+     * @param $id
+     * @param $data
+     */
+    public function editFilter($id, $data)
+    {
         $filter = \R::getCol('SELECT attr_id FROM attribute_product WHERE product_id = ?', [$id]);
         // если менеджер убрал фильтры - удаляем их
         if(empty($data['attrs']) && !empty($filter)){
@@ -72,7 +103,8 @@ class Product extends AppModel {
             return;
         }
         // если фильтры добавляются
-        if(empty($filter) && !empty($data['attrs'])){
+        if(empty($filter) && !empty($data['attrs']))
+        {
             $sql_part = '';
             foreach($data['attrs'] as $v){
                 $sql_part .= "($v, $id),";
@@ -81,9 +113,12 @@ class Product extends AppModel {
             \R::exec("INSERT INTO attribute_product (attr_id, product_id) VALUES $sql_part");
             return;
         }
+
         // если изменились фильтры - удалим и запишем новые
-        if(!empty($data['attrs'])){
-            $result = array_diff($filter, $data['attrs']);
+        if(!empty($data['attrs']))
+        {
+            $result = array_diff($filter, $data['attrs']); // возврашает разницу между массивами
+
             if(!$result || count($filter) != count($data['attrs'])){
                 \R::exec("DELETE FROM attribute_product WHERE product_id = ?", [$id]);
                 $sql_part = '';
@@ -96,17 +131,33 @@ class Product extends AppModel {
         }
     }
 
-    public function getImg(){
-        if(!empty($_SESSION['single'])){
+
+    /**
+     * Get Image
+     *
+     */
+    public function getImg()
+    {
+        if(!empty($_SESSION['single']))
+        {
             $this->attributes['img'] = $_SESSION['single'];
             unset($_SESSION['single']);
         }
     }
 
-    public function saveGallery($id){
-        if(!empty($_SESSION['multi'])){
+
+    /**
+     * Save Gallery
+     *
+     * @param $id
+     */
+    public function saveGallery($id)
+    {
+        if(!empty($_SESSION['multi']))
+        {
             $sql_part = '';
-            foreach($_SESSION['multi'] as $v){
+            foreach($_SESSION['multi'] as $v)
+            {
                 $sql_part .= "('$v', $id),";
             }
             $sql_part = rtrim($sql_part, ',');
@@ -115,11 +166,21 @@ class Product extends AppModel {
         }
     }
 
-    public function uploadImg($name, $wmax, $hmax){
+    /**
+     * Upload Images
+     *
+     * @param $name
+     * @param $wmax
+     * @param $hmax
+     */
+    public function uploadImg($name, $wmax, $hmax)
+    {
         $uploaddir = WWW . '/images/';
         $ext = strtolower(preg_replace("#.+\.([a-z]+)$#i", "$1", $_FILES[$name]['name'])); // расширение картинки
         $types = array("image/gif", "image/png", "image/jpeg", "image/pjpeg", "image/x-png"); // массив допустимых расширений
-        if($_FILES[$name]['size'] > 1048576){
+
+        if($_FILES[$name]['size'] > 1048576)
+        {
             $res = array("error" => "Ошибка! Максимальный вес файла - 1 Мб!");
             exit(json_encode($res));
         }
@@ -133,7 +194,8 @@ class Product extends AppModel {
         }
         $new_name = md5(time()).".$ext";
         $uploadfile = $uploaddir.$new_name;
-        if(@move_uploaded_file($_FILES[$name]['tmp_name'], $uploadfile)){
+        if(@move_uploaded_file($_FILES[$name]['tmp_name'], $uploadfile))
+        {
             if($name == 'single'){
                 $_SESSION['single'] = $new_name;
             }else{
@@ -146,13 +208,17 @@ class Product extends AppModel {
     }
 
     /**
+     * Resize image
+     *
+     *
      * @param string $target путь к оригинальному файлу
      * @param string $dest путь сохранения обработанного файла
      * @param string $wmax максимальная ширина
      * @param string $hmax максимальная высота
      * @param string $ext расширение файла
      */
-    public static function resize($target, $dest, $wmax, $hmax, $ext){
+    public static function resize($target, $dest, $wmax, $hmax, $ext)
+    {
         list($w_orig, $h_orig) = getimagesize($target);
         $ratio = $w_orig / $h_orig; // =1 - квадрат, <1 - альбомная, >1 - книжная
 

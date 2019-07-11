@@ -49,11 +49,14 @@ $('.sidebar-menu a').each(function(){
 // CKEDITOR.replace('editor1');
 $( '#editor1' ).ckeditor();
 
+
+// Снять отметку Checkbox
 $('#reset-filter').click(function(){
     $('#filter input[type=radio]').prop('checked', false);
     return false;
 });
 
+//
 $(".select2").select2({
     placeholder: "Начните вводить наименование товара",
     //minimumInputLength: 2,
@@ -76,6 +79,8 @@ $(".select2").select2({
     }
 });
 
+
+// Загрузку картинок
 if($('div').is('#single')){
     var buttonSingle = $("#single"),
         buttonMulti = $("#multi"),

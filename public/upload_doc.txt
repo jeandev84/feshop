@@ -1,0 +1,5 @@
+All images products uploaded /public/images
+
+And
+
+CKEditor upload to /public/upload/[]

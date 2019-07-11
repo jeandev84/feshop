@@ -25,18 +25,23 @@ class Filter
      public $groups;
      public $attrs;
      public $tpl;
+     public $filter;
 
 
     /**
      * Filter constructor.
      *
-     * @return void
+     * Ex:(new Filter('mecanic', ROOT.'/public/test_filter_tpl.php'))
+     *
+     * @param null $filter [ concret option ]
+     * @param string $tpl
      */
-     public function __construct()
-     {
-          $this->tpl = __DIR__.'/filter_tpl.php';
-          $this->run();
-     }
+    public function __construct($filter = null, $tpl = '')
+    {
+        $this->filter = $filter;
+        $this->tpl = $tpl ?: __DIR__ . '/filter_tpl.php';
+        $this->run();
+    }
 
 
     /**
