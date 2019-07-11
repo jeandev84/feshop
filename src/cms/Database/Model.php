@@ -19,7 +19,7 @@ abstract class Model
     protected $attributes = [];
     public $errors = [];
     public $rules  = [];
-    public $table;
+    // public $table;
 
 
     /**
@@ -29,6 +29,8 @@ abstract class Model
     {
         DB::instance();
     }
+
+
 
     /**
      * Assign attributes value
@@ -53,6 +55,24 @@ abstract class Model
         }
     }
 
+
+    /**
+     * Update data
+     *
+     * @param $table
+     * @param $id
+     * @return int|string
+     */
+    public function update($table, $id)
+    {
+        $bean = R::load($table, $id);
+
+        foreach($this->attributes as $name => $value)
+        {
+            $bean->{$name} = $value;
+        }
+        return R::store($bean);
+    }
 
     /**
      * Validate data
@@ -88,14 +108,15 @@ abstract class Model
     /**
      * Save data in to database
      *
+     * @param string $table
      * @return bool|int [ return lastInsertId or false if not saved data ]
      */
-    public function save()
+    public function save($table)
     {
-       $tbl = R::dispense($this->table);
+       $tbl = R::dispense($table);
        foreach ($this->attributes as $name => $value)
        {
-           $tbl->{$name} = $value;
+           $tbl->$name = $value;
        }
 
        return R::store($tbl);

@@ -44,7 +44,7 @@ class Menu
     protected $table = 'category';
     protected $cache = 3600;
     protected $cacheKey = 'menu_cache';
-    protected $attributes = [];
+    protected $attrs = [];
     protected $prepend = '';
 
 
@@ -60,7 +60,7 @@ class Menu
      *      'table' => 'categories',
      *      'cache' => 60, // 60s
      *      'cacheKey' => 'menu_select',
-     *      'attributes' => [
+     *      'attrs' => [
      *         'id' => 'menu_shop',
      *         'style' => 'border: 1px solid #ccc;'
      *      ]
@@ -144,10 +144,10 @@ class Menu
     protected function output()
     {
         // echo $this->menuHtml;
-        $attributes = $this->getAttributes();
+        $attrs = $this->getattrs();
         $html = sprintf('<{container} class="%s"%s>%s%s</{container}>',
             $this->class,
-            $attributes,
+            $attrs,
             $this->prepend,
             $this->menuHtml
         );
@@ -157,7 +157,7 @@ class Menu
         echo sprintf('<%s class="%s"%s>%s%s</%s>',
           $this->container,
           $this->class,
-        $attributes
+        $attrs
           $this->menuHtml,
           $this->container
         );
@@ -166,16 +166,16 @@ class Menu
 
 
     /**
-     * Get attributes from options
+     * Get attrs from options
      *
      * @return string
      */
-    protected function getAttributes()
+    protected function getattrs()
     {
         $str = '';
-        if(!empty($this->attributes))
+        if(!empty($this->attrs))
         {
-            foreach($this->attributes as $k => $v)
+            foreach($this->attrs as $k => $v)
             {
                 $str .= sprintf(' %s="%s"', $k, $v);
             }

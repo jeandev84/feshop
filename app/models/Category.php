@@ -13,6 +13,27 @@ class Category extends  AppModel
 {
 
     /**
+     * @var array $attributes
+     */
+    public $attributes = [
+        'title' => '',
+        'parent_id' => '',
+        'keywords' => '',
+        'description' => '',
+        'alias' => '',
+    ];
+
+    /**
+     * @var array $rules
+     */
+    public $rules = [
+        'required' => [
+            ['title'],
+        ]
+    ];
+
+
+    /**
      * Get Id category
      *
      *  Ex: 4,6,7,5,8,9,10,

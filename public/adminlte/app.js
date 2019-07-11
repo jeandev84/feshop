@@ -35,6 +35,8 @@ $('.del-item').on('click', function(){
     });
 });
 
+
+// Get active link
 $('.sidebar-menu a').each(function(){
     var location = window.location.protocol + '//' + window.location.host + window.location.pathname;
     var link = this.href;

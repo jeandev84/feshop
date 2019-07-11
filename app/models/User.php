@@ -42,11 +42,6 @@ class User extends AppModel
          ]
      ];
 
-    /**
-     * @var string $table [ Table name ]
-     */
-     public $table = 'user';
-
 
     /**
      * Check Unique fields
@@ -56,7 +51,7 @@ class User extends AppModel
      */
      public function checkUnique()
      {
-         $user = \R::findOne($this->table, 'login = ? OR email = ?', [
+         $user = \R::findOne('user', 'login = ? OR email = ?', [
              $this->attributes['login'],
              $this->attributes['email']
          ]);
