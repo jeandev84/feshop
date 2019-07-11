@@ -1,4 +1,4 @@
-a:2:{s:4:"data";s:1620:"<li>
+a:2:{s:4:"data";s:1521:"<li>
     <a href="category/men">
         Men    </a>
             <ul>
@@ -54,10 +54,7 @@ a:2:{s:4:"data";s:1620:"<li>
         Kids    </a>
             <ul>
             <li>
-    <a href="category/pervaya-novost">
-        Первая новость    </a>
-    </li><li>
-    <a href="category/pervaya-novost-22">
-        Первая новость    </a>
+    <a href="category/pervaya-novost-1">
+        Первая новость 1    </a>
     </li>        </ul>
-    </li>";s:8:"end_time";i:1562838946;}
+    </li>";s:8:"end_time";i:1562843706;}

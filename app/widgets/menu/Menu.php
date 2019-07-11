@@ -43,7 +43,7 @@ class Menu
     protected $class = 'menu';
     protected $table = 'category';
     protected $cache = 3600;
-    protected $cacheKey = 'menu_cache';
+    protected $cacheKey = 'menu_cache'; // or eshop_menu
     protected $attrs = [];
     protected $prepend = '';
 
